@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layouting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="left-container">
+        <div class="content">
+            <h1>Welcome to Twitter</h1>
+            <h2>Happening now, join twitter today</h2>
+            <img src="assets/Ilustrator.svg" alt="Illustrator" class="illustrator">
+        </div>
+        <p class="copyright">&copy; 2022 Twitter, Inc</p>
+    </div>
+    <div class="right-container">
+        <div class="content">
+            <div class="header">
+                <img src="assets/Logo-Twitter.svg" alt="Twitter logo" class="twitter-logo">
+                <div class="sign-up">
+                    Don't have an account?<a href="#" target="_self" rel="noopener noreferrer" class="signup"> Sign
+                        up</a>
+                </div>
+            </div>
+            <form action="#" class="form-login" target="_self" method="post" enctype="multipart/form-data">
+                <h1>Log in to Twitter</h1>
+                <p class="enter">Enter Twitter Account</p>
+                <input type="text" name="username" id="username" placeholder="Phone, email or username">
+                <input type="password" name="password" id="password" placeholder="Password">
+                <div class="forgot-password">
+                    <a href="#" target="_self" class="forgot-password" rel="noopener noreferrer">Forgot
+                        password ?</a>
+                </div>
+                <button type="submit" class="btn-signin">Sign In</button>
+                <p class="divider">or</p>
+                <div class="social-login">
+                    <button type="button" class="google">
+                        <img src="assets/Logo-Google.svg" alt="Google Logo">Sign in with Google</button>
+                    <button type="button" class="apple">
+                        <img src="assets/Logo-Apple.svg" alt="Apple Logo">Sign in with Apple </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
