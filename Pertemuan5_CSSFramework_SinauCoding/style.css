@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #f0f0f0 !important;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.icon {
+    height: 2rem;
+}
+
+/* Navbar */
+
+.navbar {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: black !important;
+}
+
+nav ul li a:hover {
+    color: orange !important;
+}
+
+/* Hero */
+
+.hero {
+    height: 70vh;
+    width: 100%;
+}
+
+.detail {
+    margin-left: 8%;
+    margin-top: 15%;
+    color: black;
+}
+
+.detail h1 {
+    font-size: 40px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+span {
+    color: orange;
+}
+
+.images {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.shape {
+    position: relative;
+}
+
+.images img {
+    height: 100%;
+    position: absolute;
+    left: 70%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.images:hover .shape {
+    bottom: 40px;
+}
+
+.images:hover .sony {
+    left: 75%;
+}
+
+.seemore {
+    text-decoration: none;
+    color: black;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+}
+
+.sub-title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.about-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-containers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.details-container {
+    margin: 50px;
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 1px solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+    box-shadow: 0 0 1rem rgb(163, 163, 163);
+}
+
+.text-container {
+    width: 85%;
+    text-align: justify;
+}
+
+/* Skill Section */
+
+article {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+.article-container {
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
+/* Poroject Section */
+
+#projects {
+    position: relative;
+}
+
+.color-container {
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+}
+
+.project-img {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+    box-shadow: 0 0 1rem rgb(163, 163, 163);
+}
+
+.project-title {
+    margin: 1rem;
+    color: black;
+}
+
+.github {
+    text-decoration: none;
+    color: black;
+}
+
+/* Contact Section */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250, 250, 250);
+    margin: 2rem auto;
+}
+
+.contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.contact-info-container p {
+    font-size: larger;
+}
+
+.contact-info-container a {
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    text-align: center;
+    margin: 0; /* Tambahkan ini untuk memastikan tidak ada margin ekstra */
+    padding: 1rem 0; /* Tambahkan ini untuk memberikan sedikit padding */
+}
