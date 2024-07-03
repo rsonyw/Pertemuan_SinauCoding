@@ -46,10 +46,12 @@
                         <a class="nav-link" target="_blank" href="product.html">Product</a>
                     </li>
                 </ul>
+                <img src="images/dark-mode-icon/moon.png" alt="moon icon" id="moon">
             </div>
         </div>
     </nav>
 
+    <!-- Hero -->
     <section class="hero">
         <div class="detail">
             <h1>I am Rohmatullah <span>Sony</span> Wijaya</h1>
@@ -65,6 +67,7 @@
         </div>
     </section>
 
+    <!-- About -->
     <section id="about" class="about">
         <p class="sub-title">Get To Know More</p>
         <h1 class="title">About Me</h1>
@@ -72,26 +75,30 @@
             <div class="about-containers">
                 <div class="details-container">
                     <img src="images/checkmark.png" alt="Experience icon" class="icon" />
-                    <h3>Experience</h3>
-                    <p>
+                    <h3 class="details-about">Experience</h3>
+                    <p class="details-about">
                         < 1 Years FullStack Web Developer</p> </div> <div class="details-container">
                             <img src="images/checkmark.png" alt="Education icon" class="icon" />
-                            <h3>Education</h3>
-                            <p>S.Kom. Computer Science</p>
+                            <h3 class="details-about">Education</h3>
+                            <p class="details-about">S.Kom. Computer Science</p>
                 </div>
             </div>
             <div class="text-container">
-                <p>My name is Rohmatullah Sony Wijaya. I live at Bogor, and I am 23 years old. I was born in 2001. I am
+                <p>
+                    My name is Rohmatullah Sony Wijaya. I live at Bogor, and I am 23 years old. I was born in 2001. I am
                     a recent graduate from Universitas Pakuan with a degree in Computer Science, specializing in web
-                    programming. During my studies, I completed an internship as a web developer where I gained hands-on
-                    experience in designing and coding websites using HTML, CSS, JavaScript, and PHP with Laravel
-                    framework. I am passionate about creating efficient and user-friendly web applications and am eager
-                    to contribute my skills and knowledge to a dynamic team.
+                    programming.
+                    During my studies, I completed an internship as a web developer where I gained hands-on experience
+                    in designing and coding websites using HTML, CSS, JavaScript, and PHP with Laravel framework. I am
+                    passionate about
+                    creating efficient and user-friendly web applications and am eager to contribute my skills and
+                    knowledge to a dynamic team.
                 </p>
             </div>
         </div>
     </section>
 
+    <!-- Skills -->
     <section id="skills">
         <p class="sub-title">Explore My</p>
         <h1 class="title">Skills</h1>
@@ -182,6 +189,7 @@
         </div>
     </section>
 
+    <!-- Projects -->
     <section id="projects">
         <p class="sub-title">Browse My Recent</p>
         <h1 class="title">Projects</h1>
@@ -207,6 +215,7 @@
         </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact">
         <p class="sub-title">Get in Touch</p>
         <h1 class="title">Contact Me</h1>
@@ -228,14 +237,27 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>
-            Copyright &#169; 2024
-            Rohmatullah Sony Wijaya. All Rights
-            Reserved.
-        </p>
+        <p>Copyright &#169; 2024 Rohmatullah Sony Wijaya. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        var moon = document.getElementById("moon");
+
+        moon.addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+            if (document.body.classList.contains("dark-mode")) {
+                moon.src = "images/dark-mode-icon/sun.png";
+            } else {
+                moon.src = "images/dark-mode-icon/moon.png";
+            }
+        });
+
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
-<script src="bootstrap/js/bootstrap.min.js"></script>
 
 </html>
