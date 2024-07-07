@@ -20,7 +20,7 @@ const addIngredient = () => {
     console.log(ingredient.value);
 };
 
-const deleteIngredient = (index) => {
+const eraseIngredient = (index) => {
     ingredient.value.splice(index, 1);
 };
 
@@ -40,7 +40,7 @@ const router = useRouter();
 
 const cetakTagihan = () => {
     if (totalAmount.value === 0) {
-        alert("Tidak ada pesanan yang bisa diprint");
+        alert("Tidak ada pesananan");
     } else if (customer.value === "") {
         alert("Nama Customer Harus Diisi");
     } else {
@@ -100,7 +100,7 @@ const cetakTagihan = () => {
                     <td>{{ data.amount }}</td>
                     <td>Rp. {{ data.amount * data.price }},00</td>
                     <td>
-                        <button type="button" @click="deleteIngredient(index)">
+                        <button type="button" @click="eraseIngredient(index)">
                             Delete
                         </button>
                     </td>
