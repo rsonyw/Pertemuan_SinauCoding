@@ -2,14 +2,13 @@
 import { reactive, ref, computed } from "vue";
 import { useRouter } from "vue-router";
 
+const customer = ref("");
 const ingredient = ref([]);
 const count = reactive({
     ingredient: "",
     amount: 0,
     price: 0,
 });
-
-const customer = ref("");
 
 const addIngredient = () => {
     ingredient.value.push({ ...count });
