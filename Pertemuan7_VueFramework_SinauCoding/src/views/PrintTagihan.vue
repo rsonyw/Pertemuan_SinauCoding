@@ -28,7 +28,7 @@ console.log(route.query.totalPrice);
 
 <style scoped>
 .payment {
-    border: 1px solid #dddddd;
+    border: 3px solid #484848;
     border-radius: 5px;
     padding: 10px;
     display: flex;
@@ -36,5 +36,11 @@ console.log(route.query.totalPrice);
     align-items: center;
     justify-content: center;
     line-height: 3rem;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 50px;
 }
 </style>

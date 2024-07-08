@@ -1,19 +1,19 @@
 <template>
     <div class="countIngredients">
         <h1>List Ingredient</h1>
-        <label for="customer"> Customer </label>
+        <label for="customer"> Customer: </label>
         <input type="text" id="customer" v-model="customer" /> <br />
         <span>
             <label for="ingredient">
-                Ingredient:
+                Ingredient :
                 <input type="text" id="ingredient" v-model="count.ingredient" />
             </label>
             <label for="amount">
-                Amount:
+                Amount :
                 <input type="number" id="amount" v-model="count.amount" />
             </label>
             <label for="price">
-                Price:
+                Price :
                 <input type="number" id="price" v-model="count.price" />
             </label>
             <MyButton @click="addIngredient()">Submit</MyButton>
@@ -55,8 +55,8 @@
                 </tr>
             </tbody>
         </table>
-        <p>Total Data : {{ ingredient.length }}</p>
-        <MyButton @click="cetakTagihan()">Cetak Tagihan</MyButton>
+        <p class="totalData">Total Data : {{ ingredient.length }}</p>
+        <MyButton class="cetak" @click="cetakTagihan()">Cetak Tagihan</MyButton>
     </div>
 </template>
 
@@ -130,9 +130,16 @@ const cetakTagihan = () => {
 }
 
 h1 {
+    font-size: 4rem;
+    font-weight: bold;
     text-align: center;
     margin-bottom: 50px;
 }
+
+.totalData {
+    margin-top: 1rem;
+}
+
 table {
     margin-top: 10px;
     border: 1px solid #dddddd;
@@ -144,5 +151,9 @@ td {
     padding: 5px 15px;
     border: 1px solid #dddddd;
     text-align: center;
+}
+
+.cetak {
+    margin-top: 1rem;
 }
 </style>
