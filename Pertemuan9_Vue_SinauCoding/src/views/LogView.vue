@@ -1,11 +1,16 @@
 <script setup>
 import { useCartCounter } from "../stores/cartCounter.js";
-
+import ProductComponent from "../components/ProductComponent.vue";
 import { storeToRefs } from "pinia";
 
-import ProductComponent from "../components/ProductComponent.vue";
+import { computed } from "vue";
 
-const { count } = storeToRefs(useCartCounter());
+const store = useCartCounter();
+const { count } = storeToRefs(store);
+
+const message = computed(() => {
+    return count.value > 0 ? "" : "There is nothing in your cart";
+});
 </script>
 
 <template>
@@ -38,10 +43,13 @@ const { count } = storeToRefs(useCartCounter());
             </div>
         </div>
     </nav>
-    <main>
-        <h1>This is the Chart View Page</h1>
-        <p>Items For Sale</p>
-        <p>Total Items: {{ count }}</p>
-        <ProductComponent :isCartPage="true" />
-    </main>
+    <div class="cartLog">
+        <h1>This Cart Log Page</h1>
+        <p>Total item in Cart : {{ count }}</p>
+        <p class="message">{{ message }}</p>
+        <ProductComponent :isCartPage="false" />
+    </div>
 </template>
+
+<style>
+</style>
