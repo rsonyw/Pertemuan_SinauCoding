@@ -19,28 +19,6 @@ export default {
             data.push(...response.data.slice(0, 3));
             console.log(data);
         }
-        async function postData() {
-            const params = {};
-            const auth =
-                "9690fb8196780608aa1199cadbf3901b8d6679995f2667a259a1f07fb7617cd";
-
-            params.name = "ojan";
-            params.email = "ojan@mail.com";
-            params.gender = "male";
-            params.status = "active";
-
-            const response = await axios.post(
-                "https://gorest.co.in/public/v2/users",
-                params,
-                {
-                    headers: {
-                        Authorization: `Bearer ${auth}`,
-                    },
-                }
-            );
-
-            console.log(response);
-        }
 
         return { getData, data, postData };
     },
