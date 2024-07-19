@@ -1,72 +1,56 @@
-<script setup>
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
+<script>
+import axios from 'axios';
+import { onMounted, reactive } from 'vue';
+
+export default {
+    setup() {
+        const post = reactive([]);
+        const author = reactive([]);
+
+        onMounted(() => {
+            getPost();
+            getAuthor();
+
+            console.log(author);
+        });
+
+        async function getPost() {
+            const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+            post.push(...response.data.slice(0, 3));
+        }
+
+        async function getAuthor() {
+            const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+            author.push(...response.data.slice(0, 5));
+        }
+
+        return { post, author };
+    },
+};
 </script>
 
 <template>
-    <RouterView />
+    <main>
+        <div class="header">
+            <h1>Post</h1>
+        </div>
+        <div class="space-y">
+            <div class="card" v-for="data in post" :key="data.id">
+                <p class="card-title">{{ data.title }}</p>
+                <p>
+                    {{ data.body }}
+                </p>
+            </div>
+        </div>
+        <div class="header">
+            <h1>Author</h1>
+        </div>
+        <div class="author">
+            <div class="card" v-for="data in author" :key="data.id">
+                <p class="card-title">{{ data.name }}</p>
+                <p>{{ data.username }}</p>
+                <p>{{ data.email }}</p>
+            </div>
+        </div>
+    </main>
 </template>
-
-<style scoped>
-header {
-    line-height: 1.5;
-    max-height: 100vh;
-}
-
-.logo {
-    display: block;
-    margin: 0 auto 2rem;
-}
-
-nav {
-    width: 100%;
-    font-size: 12px;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-    color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-    background-color: transparent;
-}
-
-nav a {
-    display: inline-block;
-    padding: 0 1rem;
-    border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-    border: 0;
-}
-
-@media (min-width: 1024px) {
-    header {
-        display: flex;
-        place-items: center;
-        padding-right: calc(var(--section-gap) / 2);
-    }
-
-    .logo {
-        margin: 0 2rem 0 0;
-    }
-
-    header .wrapper {
-        display: flex;
-        place-items: flex-start;
-        flex-wrap: wrap;
-    }
-
-    nav {
-        text-align: left;
-        margin-left: -1rem;
-        font-size: 1rem;
-
-        padding: 1rem 0;
-        margin-top: 1rem;
-    }
-}
-</style>

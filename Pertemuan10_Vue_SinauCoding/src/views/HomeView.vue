@@ -1,7 +1,7 @@
 <script>
-import axios from "axios";
-import { reactive, onMounted } from "vue";
-import api from "../api";
+import axios from 'axios';
+import { reactive, onMounted } from 'vue';
+// import { apiPost, apiAuthor } from "../api";
 
 export default {
     setup() {
@@ -9,15 +9,12 @@ export default {
 
         onMounted(async () => {
             getData();
-            postData();
         });
 
         async function getData() {
-            const response = await axios.get(
-                "https://jsonplaceholder.typicode.com/comments"
-            );
-            data.push(...response.data.slice(0, 3));
-            console.log(data);
+            const response = await apiPost({
+                method: 'get',
+            });
         }
 
         return { getData, data, postData };
