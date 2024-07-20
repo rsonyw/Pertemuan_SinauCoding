@@ -54,3 +54,37 @@ export default {
         </div>
     </main>
 </template>
+
+<style scoped>
+.header {
+    text-align: center;
+}
+
+.space-y {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.author {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.card {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 2rem;
+}
+</style>
